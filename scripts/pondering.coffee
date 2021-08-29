@@ -169,12 +169,12 @@ replies = [
    "I think so, Brain, but just how will we get the weasel to hold still?",
    "I think so, Brain, but how are we going to get the bacon flavoring into the pencils?",
    "I think so, Brain, but instant karma's always so lumpy.",
-   # Pinky: Well, I think so, Brain, but... no, it's too stupid.
+   "Well, I think so, Brain, but... no, it's too stupid."
    # Brain: We shall disguise ourselves as a cow!
    # Pinky: Narf, Brain! That was it exactly!
    "I think so, Brain, but I'm allergic to petroleum jelly.",
    "I think so, Brain, but how can you have a Duck Dynasty if none of the people are ducks?",
-   # Pinky: I think so, Brain, but she'd never leave Mickey.
+   "I think so, Brain, but she'd never leave Mickey."
    # Brain: I thought we agreed never to discuss that!
    "Uh, I think so Brain, but a show about two talking lab mice? It'll never get on the air.",
 ]
@@ -183,5 +183,8 @@ module.exports = (robot) ->
     robot.hear /[Aa]re you pondering what I'm pondering/, (msg) ->
         msg.send msg.random replies
 
-#    Brain: Why do I even bother asking?
-#    Pinky: I dunno, Brain. Maybe it's all part of some huge, cosmic plot formula!
+    robot.hear /Why do I even bother asking?/, (msg) ->
+        msg.send "I dunno, Brain. Maybe it's all part of some huge, cosmic plot formula!"
+
+    robot.hear /We shall disguise ourselves as a cow!/, (msg) ->
+        msg.send "Narf, Brain! That was it exactly!"
