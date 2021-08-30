@@ -26,5 +26,5 @@ module.exports = (robot) ->
                 robot.brain.set 'messageCount', messageCount
                 false
         (response) ->
-            response.reply response.random exclamations
+            response.send response.random exclamations
     )
