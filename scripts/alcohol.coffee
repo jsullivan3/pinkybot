@@ -39,4 +39,4 @@ module.exports = (robot) ->
       else
         drinks = 3
     servings = ((msg.random thebar) for x in [1..drinks])
-    msg.send servings
+    msg.send "#{servings}"
