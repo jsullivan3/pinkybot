@@ -13,6 +13,10 @@ module.exports = (robot) ->
     robot.respond /say bye/, (msg) ->
         msg.send "Goodbye, cruel world!"
 
+    robot.respond /wish (.*) a happy birthday/i, (res) ->
+        birthdayKid = res.match[1]
+        res.send "Happy Birthday to you!\nHappy Birthday to you!\nHappy Birthday dear #{birthdayKid},\nHappy Birthday to you!"
+
     robot.listen(
         (message) ->
             messageCount = robot.brain.get('messageCount') * 1 or 0
